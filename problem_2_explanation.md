@@ -1,0 +1,1 @@
+This code can find the index of serched number from roateted array. Time complexity is O(nlog(n)) because code devide list into two half-length lists and abandon non-candidate one every time and recursion again until find the number. 

@@ -1,0 +1,1 @@
+This code looks for smallest and largest integer from a list of unsorted integers. The code runs in O(n) time because it can find the max and min in a single traversal.

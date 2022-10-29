@@ -1,0 +1,1 @@
+This code takes number and output square root number floored into integer. Time complexity is O(nlog(n)) because of using binary search.
