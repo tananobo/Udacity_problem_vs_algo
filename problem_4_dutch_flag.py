@@ -29,14 +29,17 @@ def test_function(test_case):
         print("Fail")
 
 # TEST1: Udacity provided Ahem. all should be passed.
+print("===TEST case1===")
 test_function([0, 0, 2, 2, 2, 1, 1, 1, 2, 0, 2])
 test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0, 2, 0, 0, 1])
 test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
 
 # TEST2: empty -> output [] and Pass
+print("===TEST case2===")
 test_function([])
 
 # TEST3: single number -> output [same num] and Pass 
+print("===TEST case3===")
 test_function([0])
 test_function([1])
 test_function([2])

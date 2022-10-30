@@ -7,6 +7,10 @@ def rotated_array_search(input_list, number, low, high):
     Returns:
        int: Index or -1
     """
+    if not input_list:
+        return -1
+    if isinstance(input_list[0], str):
+        return -1
     if low > high:
         return -1
     mid = (high + low) // 2
@@ -55,8 +59,29 @@ def test_function(test_case):
         print(rotated_array_search(input_list, number, 0, len(input_list) - 1))
         print("Fail")
 
+# TEST case1: normal case / all output should be "Pass"
+print("===TEST case1===")
 test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
 test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 8])
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+
+# TEST case2: minimub list
+print("===TEST case2===") 
+test_function([[1],1]) # Pass
+
+# TEST case3: target number is included in the list 
+print("===TEST case3===")
+test_function([[6, 7, 8, 1, 2, 3, 4], 10]) # Pass / rotated_array_search function return -1 in case target number is not included in the list.
+
+# TEST case4: empty list
+print("===TEST case4===")
+test_function([[],0]) # Pass / the function returns -1 in case list is empty.
+
+# TEST case5: string list
+print("===TEST case5===")
+test_function([["A","B","C"],0]) # Pass / the function returns -1 in case the element is string.
+
+# TEST case6: float number
+print("===TEST case6===")
+test_function([[2.1,0.1,1.1],1.1]) # Pass

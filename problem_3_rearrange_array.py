@@ -40,6 +40,9 @@ def rearrange_digits(input_list):
     Returns:
        (int),(int): Two maximum sums
     """
+    if not input_list:
+        print("list should contain at least one integer!")
+        return -1 
     sorted_list = mergesort(input_list)
     int1 = 0
     int2 = 0
@@ -61,13 +64,21 @@ def test_function(test_case):
 
 test_function([[1, 2, 3, 4, 5], [542, 31]])
 # test_case1: Udacity provided
+print("===TEST case1===")
 test_case = [[4, 6, 2, 5, 9, 8], [964, 852]]
-test_function(test_case) # True: sum should be 1816
+test_function(test_case) # Pass: sum should be 1816
 
 # test_case2: min case
+print("===TEST case2===")
 test_case = [[0, 0], [0, 0]]
-test_function(test_case) # True: sum should be 0
+test_function(test_case) # Pass: sum should be 0
 
 # test_case3: long case
+print("===TEST case3===")
 test_case = [[0,9,1,8,2,7,3,6,4,5],[97531,86420]]
-test_function(test_case) # True: sum should be 183951
+test_function(test_case) # Pass: sum should be 183951
+
+# test_case4: empty input
+print("===TEST case4===")
+output = rearrange_digits([]) # output: list should contain at least one integer!
+print(output) # -1
