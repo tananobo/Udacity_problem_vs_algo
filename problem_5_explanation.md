@@ -3,10 +3,10 @@ This code intiates Trie by calling Trie() and create word tier by calling trie.i
 Algorithm methodology: a tree-like data structure that stores a dynamic set of strings <br>
 
 # class TrieNode
-Time complexity: O(1) / function insert() can access directory dictionaly value using key.
-Space complexity: O(n) / self.children = {} size is decided depends on inputs.
+Time complexity: O(1) / function insert() can access directory dictionaly value using key. <br>
+Space complexity: O(n) / self.children = {} size is decided depends on inputs. <br>
 <br>
 
 # class Trie
-Time complexity: O(n) / function insert() and find() use for loop that iterate the input word (or prefix). So, time coplexity is decided input word length.
-Space complexity: O(1) / no auxiliary valuable that vary depends on inputs is used.
+Time complexity: O(n) / function insert() and find() use for loop that iterate the input word (or prefix). So, time coplexity is decided input word length. <br>
+Space complexity: O(1) / no auxiliary valuable that vary depends on inputs is used. <br>
